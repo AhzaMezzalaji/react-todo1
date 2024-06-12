@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Todos from "./components/Todos";
+
 function App() {
   const [todos, setTodos] = useState([
     {
@@ -27,6 +29,7 @@ function App() {
       {todos.map((todo) => {
         return <p key={todo.id}>{todo.title}</p>;
       })}
+      <Todos todos={todos} />
     </div>
   );
 }
